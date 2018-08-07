@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
-import { fetchQuestion, submitAnswer, submitAnswerSuccess } from '../actions/questions';
+import { fetchQuestion, submitAnswer,} from '../actions/questions';
 
 export class Dashboard extends React.Component {
   componentDidMount() {
@@ -9,8 +9,8 @@ export class Dashboard extends React.Component {
   }
 
   submitAnswer(e) {
-    e.preventDefault;
-    this.props.dispatch(submitAnswer(this.input.value, this.props.question));
+    e.preventDefault();
+    this.props.dispatch(submitAnswer(this.input.value));
   }
 
   render() {
@@ -26,14 +26,14 @@ export class Dashboard extends React.Component {
 
     // answer
     let answer = null;
-    if (this.props.correct) {
+    if (this.props.feedback) {
       // if user got it right, display 'correct' message
       answer = 
         <div className="answer">
           <h3>¡Buen trabajo! ¡Estas correcto!</h3>
           <h4> Good job!  You are correct! </h4>
         </div>
-    } else if (this.props.correct === false) {
+    } else if (this.props.feedback === false) {
       // if user got it wrong, display 'incorrect' message
       answer =
       <div className="answer">
@@ -44,10 +44,11 @@ export class Dashboard extends React.Component {
       // if user has not guess, display input box
       answer = 
         <div className="answer">
-          <label for="answer-text-box" class="answer-box-label">Answer:</label>
+          <label htmlFor="answer-text-box" className="answer-box-label">Answer:</label>
           <input name="answer-text-box" ref={input => this.input = input} type="text-box" placeholder="Type your answer"></input>
         </div>
     }
+    console.log(this.props.feedback)
 
     return (
       <div className="dashboard center">
@@ -56,10 +57,10 @@ export class Dashboard extends React.Component {
         </div>
         <div className="dashboard-protected-data">
           <p>Question: {this.props.question}</p>
-          <p>
+          <div>
             {answer}
             {button}
-          </p>
+          </div>
           <p>Times Correct:{this.props.numCorrect}</p>
           <p>Times Attempted:{this.props.numAttempts}</p>
         </div>
@@ -71,10 +72,11 @@ export class Dashboard extends React.Component {
 const mapStateToProps = state => {
   return {
     username: state.auth.currentUser.username,
-    question: state.questions.data.question,
-    answer: state.questions.data.answer,
-    numCorrect: state.questions.data.numCorrect,
-    numAttempts: state.questions.data.numAttempts
+    question: state.questions.question,
+    answer: state.questions.answer,
+    feedback: state.questions.feedback,
+    numCorrect: state.questions.numCorrect,
+    numAttempts: state.questions.numAttempts
   };
 };
 

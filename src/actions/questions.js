@@ -55,6 +55,7 @@ export const submitAnswer = (userAnswer) => (dispatch, getState) => {
   .then(res => normalizeResponseErrors(res))
   .then(res => res.json())
   .then(data => {
+    console.log(data);
     dispatch(submitAnswerSuccess(data))
   })
   .catch(err => {

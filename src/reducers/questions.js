@@ -19,7 +19,7 @@ export default function reducer(state = initialState, action) {
     return Object.assign({}, state, {
       question: action.data.question,
       answer: null,
-      correct: null,
+      feedback: null,
       numCorrect: action.data.numCorrect,
       numAttempts: action.data.numAttempts,
       error: null
@@ -32,7 +32,7 @@ export default function reducer(state = initialState, action) {
     return Object.assign({}, state, {
       question: null,
       answer: action.data.answer,
-      correct: action.data.feedback,
+      feedback: action.data.feedback,
       error: null
     })
   } else if (action.type === SUBMIT_ANSWER_ERROR) {
