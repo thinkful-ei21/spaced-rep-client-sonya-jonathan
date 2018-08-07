@@ -33,6 +33,8 @@ export default function reducer(state = initialState, action) {
       question: null,
       answer: action.data.answer,
       feedback: action.data.feedback,
+      numCorrect: action.data.numCorrect,
+      numAttempts: action.data.numAttempts,
       error: null
     })
   } else if (action.type === SUBMIT_ANSWER_ERROR) {
