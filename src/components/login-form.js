@@ -20,7 +20,7 @@ export class LoginForm extends React.Component {
     }
     return (
       <form
-        className="login-form"
+        className="login-form center"
         onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
       >
         {error}

@@ -1,23 +1,45 @@
 import {
-  FETCH_QUESTIONS_SUCCESS,
-  FETCH_QUESTIONS_ERROR
+  FETCH_QUESTION_SUCCESS,
+  FETCH_QUESTION_ERROR,
+  SUBMIT_ANSWER_SUCCESS,
+  SUBMIT_ANSWER_ERROR
 } from '../actions/questions';
 
 const initialState = {
-  data: '',
+  question: null,
+  answer: null,
+  feedback: null,
+  numCorrect: 0,
+  numAttempts: 0,
   error: null
 };
 
 export default function reducer(state = initialState, action) {
-  if (action.type === FETCH_QUESTIONS_SUCCESS) {
+  if (action.type === FETCH_QUESTION_SUCCESS) {
     return Object.assign({}, state, {
-      data: action.data,
+      question: action.data.question,
+      answer: null,
+      correct: null,
+      numCorrect: action.data.numCorrect,
+      numAttempts: action.data.numAttempts,
       error: null
     });
-  } else if (action.type === FETCH_QUESTIONS_ERROR) {
+  } else if (action.type === FETCH_QUESTION_ERROR) {
     return Object.assign({}, state, {
       error: action.error
     });
+  } else if (action.type === SUBMIT_ANSWER_SUCCESS) {
+    return Object.assign({}, state, {
+      question: null,
+      answer: action.data.answer,
+      correct: action.data.feedback,
+      error: null
+    })
+  } else if (action.type === SUBMIT_ANSWER_ERROR) {
+    return Object.assign({}, state, {
+      error: action.error
+    })
   }
+
   return state;
 }
