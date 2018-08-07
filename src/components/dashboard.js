@@ -41,7 +41,7 @@ export class Dashboard extends React.Component {
         <h4>Incorrect!  The right answer was {this.props.answer}.</h4>
       </div>
     } else {
-      // if user has not guess, display input box
+      // if user has not guessed, display input box
       answer = 
         <div className="answer">
           <label htmlFor="answer-text-box" className="answer-box-label">Answer:</label>
