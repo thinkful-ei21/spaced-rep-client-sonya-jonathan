@@ -9,15 +9,16 @@ export class Dashboard extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="dashboard">
         <div className="dashboard-username">
           Username: {this.props.username}
         </div>
-        <div className="dashboard-name">Name: {this.props.name}</div>
         <div className="dashboard-protected-data">
-          Protected data: {this.props.questions}
+          <p>Question: {this.props.question}</p>
+          <p>Answer:{this.props.answer}</p>
+          <p>Times Correct:{this.props.numCorrect}</p>
+          <p>Times Attempted:{this.props.numAttempts}</p>
         </div>
       </div>
     );
@@ -25,11 +26,12 @@ export class Dashboard extends React.Component {
 }
 
 const mapStateToProps = state => {
-  const { currentUser } = state.auth;
   return {
     username: state.auth.currentUser.username,
-    name: `${currentUser.firstName} ${currentUser.lastName}`,
-    questions: state.questions.data
+    question: state.questions.data.question,
+    answer: state.questions.data.answer,
+    numCorrect: state.questions.data.numCorrect,
+    numAttempts: state.questions.data.numAttempts
   };
 };
 
