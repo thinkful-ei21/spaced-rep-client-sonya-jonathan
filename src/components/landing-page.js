@@ -11,9 +11,14 @@ export function LandingPage(props) {
   }
 
   return (
-    <div className="home center">
-      <h2>¡Vamos Apprender Español!</h2>
-      <h3>(Let's Learn Spanish!)</h3>
+    <div className="home">
+      <h1>Cartas Contra Español</h1>
+      <h3>¡Vamos Apprender Español!</h3>
+      <h5>(Let's Learn Spanish!)</h5>
+      <p>
+        Come and use the best technique to learning anything and apply it yo
+        learn the best language in the world... Español!
+      </p>
       <LoginForm />
       <Link to="/register">Register</Link>
     </div>

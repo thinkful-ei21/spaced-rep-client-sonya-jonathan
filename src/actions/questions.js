@@ -42,7 +42,7 @@ export const fetchQuestion = () => (dispatch, getState) => {
     });
 };
 
-export const submitAnswer = (userAnswer) => (dispatch, getState) => {
+export const submitAnswer = userAnswer => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
   return fetch(`${API_BASE_URL}/questions`, {
     method: 'POST',
@@ -50,18 +50,15 @@ export const submitAnswer = (userAnswer) => (dispatch, getState) => {
       Authorization: `Bearer ${authToken}`,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({userAnswer})
+    body: JSON.stringify({ userAnswer })
   })
-  .then(res => normalizeResponseErrors(res))
-  .then(res => res.json())
-  .then(data => {
-    console.log(data);
-    dispatch(submitAnswerSuccess(data))
-  })
-  .catch(err => {
-    dispatch(submitAnswerError(err))
-  });
-}
-
-
-
+    .then(res => normalizeResponseErrors(res))
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      dispatch(submitAnswerSuccess(data));
+    })
+    .catch(err => {
+      dispatch(submitAnswerError(err));
+    });
+};

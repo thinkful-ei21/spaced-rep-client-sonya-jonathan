@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { clearAuth } from '../actions/auth';
+import requiresLogin from './requires-login';
 import { clearAuthToken } from '../local-storage';
 
 export class HeaderBar extends React.Component {
@@ -13,11 +14,17 @@ export class HeaderBar extends React.Component {
     // Only render the log out button if we are logged in
     let logOutButton;
     if (this.props.loggedIn) {
-      logOutButton = <button className="log-out-button" onClick={() => this.logOut()}>Log out</button>;
+      logOutButton = (
+        <button className="log-out-button" onClick={() => this.logOut()}>
+          Log out
+        </button>
+      );
     }
+
     return (
-      <div className="header-bar center">
+      <div className="header-bar">
         <h1>Cartas Contra Español</h1>
+        {this.props.username}
         {logOutButton}
       </div>
     );
@@ -25,7 +32,8 @@ export class HeaderBar extends React.Component {
 }
 
 const mapStateToProps = state => ({
+  username: state.auth.currentUser.username,
   loggedIn: state.auth.currentUser !== null
 });
 
-export default connect(mapStateToProps)(HeaderBar);
+export default requiresLogin()(connect(mapStateToProps)(HeaderBar));
