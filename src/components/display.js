@@ -25,21 +25,16 @@ export class Display extends React.Component {
     let display = (
       <form className="display">
         <p className="display-word">{this.props.question}</p>
-        <div className="submit-section">
-          <label htmlFor="display-text-box" className="display-box-label">
-            Translate:
-          </label>
-          <input
-            className="display-text-box"
-            name="display-text-box"
-            ref={input => (this.input = input)}
-            type="text-box"
-            placeholder="Type your answer"
-          />
-          <button onClick={e => this.submitAnswer(e)} type="submit">
-            Submit
-          </button>
-        </div>
+        <input
+          className="display-text-box"
+          name="display-text-box"
+          ref={input => (this.input = input)}
+          type="text-box"
+          placeholder="Type your answer"
+        />
+        <button onClick={e => this.submitAnswer(e)} type="submit">
+          Submit
+        </button>
       </form>
     );
 

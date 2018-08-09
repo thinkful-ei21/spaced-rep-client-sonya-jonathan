@@ -76,8 +76,8 @@ span {
 
 .submit-section,  {
   display: flex;
-  flex-flow: row;
-  align-items: center;
+  flex-flow: column;
+  /* align-items: center; */
 }
 
 .display-box-label {
@@ -104,6 +104,10 @@ button {
   transition: none 200ms ease-out;
   transition-property: color, background;
   margin: 10px 0 10px 0;
+}
+
+button:focus, input:focus{
+  outline: none;
 }
 
 button:hover{
