@@ -29,9 +29,6 @@ body {
   flex-flow: column;
   align-items: center;
   margin: auto;
-  /* background-color: rgb(10, 95, 10); */
-  /* color:  rgb(45, 202, 163);
-  text-shadow: black 2px 3px 0px; */
 }
 
 .dashboard {
