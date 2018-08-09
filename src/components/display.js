@@ -13,6 +13,9 @@ export class Display extends React.Component {
     if (this.btn) {
       this.btn.focus();
     }
+    if (this.input) {
+      this.input.focus();
+    }
   }
 
   submitAnswer(e) {
