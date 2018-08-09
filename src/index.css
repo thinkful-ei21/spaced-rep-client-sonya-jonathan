@@ -1,7 +1,3 @@
-/* font-family: 'Exo 2', sans-serif;
-font-family: 'Varela Round', sans-serif;
-font-family: 'Signika', sans-serif; */
-
 body {
   margin: 0;
   padding: 0;
@@ -10,14 +6,16 @@ body {
   font-family: 'Signika', sans-serif;
 }
 
-
-
 @media only screen and (max-width:770px){
   .header-bar {
     display: flex;
     flex-flow: column wrap;
     justify-content: center
   }
+}
+
+.header-bar, .home {
+  text-align: center;
 }
 
 .header-bar {
@@ -31,18 +29,33 @@ body {
   margin: auto;
 }
 
+h1 {
+  color:  rgb(45, 202, 163);
+  text-shadow: rgb(12, 46, 37) 0 0 5px;
+  font-size: 30px;
+  border: 10px solid rgb(238, 108, 21);
+  border-radius: 25px;
+  background-color: rgb(30, 112, 30);
+  margin: 0;
+  padding: 6px;
+}
+
+h3 {
+  font-size: 25px;
+  color: rgb(45, 202, 163);
+}
+
+h5 {
+  margin: 0 auto 30px auto;
+  padding: 10px;
+  font-size: 28px;
+  color: rgb(45, 202, 163);
+}
+
 .dashboard {
   display: flex;
   flex-flow: column;
   margin-top: 25px;
-}
-
-.user-data {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 5px;
-  margin: 0;
-  justify-content: space-around;
 }
 
 li {
@@ -55,10 +68,6 @@ span {
   justify-content: flex-end;
 }
 
-.header-bar, .home {
-  text-align: center;
-}
-
 .display, .feedback {
   display: flex;
   flex-flow: column;
@@ -66,9 +75,15 @@ span {
   text-align: center;
 }
 
-.display-word{
+.display-word {
   text-align: center;
-  font-size: 72px;
+  font-size: 60px;
+  margin: 0;
+  padding: 20px;
+}
+
+.display {
+  width: 75vw;
 }
 
 .submit-section,  {
@@ -92,14 +107,14 @@ button {
   border: 1px solid rgb(238, 108, 21);
   border-radius: 290486px;
   color: black;
-  font-size: 0.6em;
+  font-size: 0.4em;
   letter-spacing: 0.2em;
-  padding: 1em 2em;
+  padding: 0.7em 1.7em;
   text-transform: uppercase;
   text-decoration: none;
   transition: none 200ms ease-out;
   transition-property: color, background;
-  margin: 10px 0 10px 0;
+  margin: 5px 0 15px 0;
 }
 
 button:focus, input:focus{
@@ -111,30 +126,6 @@ button:hover{
   color: rgb(12, 46, 37);
 }
 
-h1 {
-  color:  rgb(45, 202, 163);
-  text-shadow: rgb(12, 46, 37) 0 0 5px;
-  font-size: 40px;
-  border: 10px solid rgb(238, 108, 21);
-  background-color: rgb(30, 112, 30);
-  margin: 0;
-  padding: 5px;
-}
-
-h3 {
-  font-size: 36px;
-  color: rgb(45, 202, 163);
-  padding: 10px 10px 0 10px;
-  margin: 10px auto 0 auto;
-  
-}
-h5 {
-  /* margin: 10px auto 10px auto; */
-  margin: 0 auto 30px auto;
-  padding: 10px;
-  font-size: 28px;
-  color: rgb(45, 202, 163);
-}
 
 .home p, form {
   font-size: 20px;
@@ -154,6 +145,19 @@ h5 {
   color: red
 }
 
+.streak-section {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(45, 202, 163);
+  font-size: 20px;
+  }
+
+.streak.count {
+font-size: 25px;
+}
+
 /*  styles for large screens */
 @media only screen and (min-width: 770px) {
   .header-button {
@@ -161,16 +165,12 @@ h5 {
     top: 15px;
     right: 25px;
   }
+
   .header-title {
     text-align: center;
   }
   
   .streak-section {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-    color: rgb(45, 202, 163);
     font-size: 30px;
     }
     
@@ -180,20 +180,11 @@ h5 {
 
   h1 {
     padding: 15px;
-    border-radius: 25px;
+    font-size: 40px;
   }
 
-  .user-data {
-    color: rgb(45, 202, 163);
-    font-size: 25px;
-  }
-
-  .user-data .numCorrect {
-    font-size: 30px;
-  }
-
-  .user-data .numAttempts {
-    font-size: 30px;
+  h3 {
+    font-size: 36px;
   }
 
   form .display-word {
@@ -202,6 +193,16 @@ h5 {
 
   .register-link {
     color: rgb(238, 108, 21);
+  }
+
+  .display-word{
+    font-size: 72px;
+  }
+
+  button {
+    font-size: 0.6em;
+    margin: 10px 0 10px 0;
+    padding: 1em 2em;
   }
 
 }
