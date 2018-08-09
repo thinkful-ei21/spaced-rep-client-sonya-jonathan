@@ -21,12 +21,12 @@ export class HeaderBar extends React.Component {
     }
 
     return (
-      <div className="header-bar">
+      <header role='banner' className="header-bar">
         <div className="header-title">
           <h1>Cartas Contra Español</h1>
         </div>
         <div className="header-button">{logOutButton}</div>
-      </div>
+      </header>
     );
   }
 }
