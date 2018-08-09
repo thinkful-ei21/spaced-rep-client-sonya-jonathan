@@ -10,14 +10,11 @@ body {
   font-family: 'Signika', sans-serif;
 }
 
-
-
 @media only screen and (min-width: 770px) {
   .header-button {
-    
     position: absolute;
-  top: 50px;
-  right: 25px;
+    top: 50px;
+    right: 25px;
   }
   .header-title {
     text-align: center;
@@ -36,8 +33,6 @@ body {
 .header-bar {
   background-color: rgb(238, 108, 21);
 }
-
-/* rgb(235, 183, 14); */
 
 .header-title {
   display: flex;
@@ -163,7 +158,6 @@ h5 {
   width: 300px;
   margin: 0px auto 30px;
 }
-
 
 .right-answer, .feedback-right {
   color: Green;
