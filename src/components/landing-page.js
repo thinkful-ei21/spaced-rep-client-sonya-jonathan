@@ -19,7 +19,7 @@ export function LandingPage(props) {
         learn the best language in the world... Español!
       </p>
       <LoginForm />
-      <Link to="/register">Register</Link>
+      <Link className="register-link" to="/register">Register</Link>
     </div>
   );
 }
