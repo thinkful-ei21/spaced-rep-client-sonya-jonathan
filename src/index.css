@@ -157,17 +157,7 @@ h5 {
   color: red
 }
 
-/* @media only screen and (min-width: 770px) {
-  .streak-section {
-  flex-direction: column;
-  color: rgb(45, 202, 163);
-  display: flex;
-  justify-content: center;
-  flex-flow: column;
-  }
-
-} */
-
+/*  styles for large screens */
 @media only screen and (min-width: 770px) {
   .header-button {
     position: absolute;
@@ -177,6 +167,7 @@ h5 {
   .header-title {
     text-align: center;
   }
+  
   .streak-section {
     display: flex;
     text-align: center;
@@ -186,37 +177,34 @@ h5 {
     font-size: 30px;
     }
     
-    .streak-count {
-      font-size: 60px;
-    }
+  .streak-count {
+    font-size: 60px;
+  }
 
+  h1 {
+    padding: 15px;
+    border-radius: 25px;
+  }
 
-    
-    h1 {
-      padding: 15px;
-      border-radius: 25px;
-    }
+  .user-data {
+    color: rgb(45, 202, 163);
+    font-size: 25px;
+  }
 
-    .user-data {
-      color: rgb(45, 202, 163);
-      font-size: 25px;
-    }
+  .user-data .numCorrect {
+    font-size: 30px;
+  }
 
-    .user-data .numCorrect {
-      font-size: 30px;
+  .user-data .numAttempts {
+    font-size: 30px;
+  }
 
-    }
+  form .display-word {
+    margin: 0
+  }
 
-    .user-data .numAttempts {
-      font-size: 30px;
-    }
-
-    form .display-word {
-      margin: 0
-    }
-
-    .register-link {
-      color: rgb(238, 108, 21);
-    }
+  .register-link {
+    color: rgb(238, 108, 21);
+  }
 
 }
