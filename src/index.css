@@ -10,17 +10,7 @@ body {
   font-family: 'Signika', sans-serif;
 }
 
-@media only screen and (min-width: 770px) {
-  .header-button {
-    position: absolute;
-    top: 15px;
-    right: 25px;
-  }
-  .header-title {
-    text-align: center;
-  }
 
-}
 
 @media only screen and (max-width:770px){
   .header-bar {
@@ -165,4 +155,64 @@ h5 {
 
 .feedback-wrong {
   color: red
+}
+
+/* @media only screen and (min-width: 770px) {
+  .streak-section {
+  flex-direction: column;
+  color: rgb(45, 202, 163);
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  }
+
+} */
+
+@media only screen and (min-width: 770px) {
+  .header-button {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+  }
+  .header-title {
+    text-align: center;
+  }
+  .streak-section {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(45, 202, 163);
+    font-size: 30px;
+    }
+    
+    .streak-count {
+      font-size: 60px;
+    }
+
+
+    
+    h1 {
+      padding: 15px;
+      border-radius: 25px;
+    }
+
+    .user-data {
+      color: rgb(45, 202, 163);
+      font-size: 25px;
+    }
+
+    .user-data .numCorrect {
+      font-size: 30px;
+
+    }
+
+    .user-data .numAttempts {
+      font-size: 30px;
+    }
+
+    form .display-word {
+      margin: 0
+    }
+
 }

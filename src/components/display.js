@@ -30,7 +30,7 @@ export class Display extends React.Component {
       message = 'Bet you miss the next one >:)';
     }
     if (this.props.streak >= 5) {
-      message = 'Everyone gets lucky sometime...';
+      message = 'Everyone gets lucky sometimes...';
     }
     if (this.props.streak >= 7) {
       message = 'Okay, okay... so you know a few words...';
@@ -102,8 +102,8 @@ export class Display extends React.Component {
       <React.Fragment>
         {display}
         <section className="streak-section">
-          <span>{this.props.streak}</span>
-          <span>{message}</span>
+          <span className="streak-count">Streak: {this.props.streak}</span>
+          <span className="streak-message">{message}</span>
         </section>
       </React.Fragment>
     );

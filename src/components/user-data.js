@@ -8,10 +8,10 @@ export class UserData extends React.Component {
         {/* <h3>{this.props.username}</h3> */}
         {/* <section className="user-stats"> */}
         <span>
-          Times Correct: <span>{this.props.numCorrect}</span>
+          Times Correct: <span className="numCorrect">{this.props.numCorrect}</span>
         </span>
         <span>
-          Times Attempted: <span>{this.props.numAttempts}</span>
+          Times Attempted: <span className="numAttempts">{this.props.numAttempts}</span>
         </span>
         {/* </section> */}
       </section>
