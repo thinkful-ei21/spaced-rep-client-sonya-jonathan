@@ -21,6 +21,21 @@ export class Display extends React.Component {
   }
 
   render() {
+    let message = 'Come on... you can do better than that... :(';
+
+    if (this.props.streak >= 3) {
+      message = 'Bet you miss the next one >:)';
+    }
+    if (this.props.streak >= 5) {
+      message = 'Everyone gets lucky sometime...';
+    }
+    if (this.props.streak >= 7) {
+      message = 'Okay, okay... so you know a few words...';
+    }
+    if (this.props.streak >= 10) {
+      message = 'Come on... no one like a show off...';
+    }
+
     // if user has not guessed, display input box
     let display = (
       <form className="display">
@@ -80,11 +95,20 @@ export class Display extends React.Component {
       );
     }
 
-    return <React.Fragment>{display}</React.Fragment>;
+    return (
+      <React.Fragment>
+        {display}
+        <section className="streak-section">
+          <span>{this.props.streak}</span>
+          <span>{message}</span>
+        </section>
+      </React.Fragment>
+    );
   }
 }
 const mapStateToProps = state => {
   return {
+    streak: state.questions.streak,
     question: state.questions.question,
     answer: state.questions.answer,
     feedback: state.questions.feedback

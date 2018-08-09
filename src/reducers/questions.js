@@ -11,6 +11,7 @@ const initialState = {
   feedback: null,
   numCorrect: 0,
   numAttempts: 0,
+  steak: 0,
   error: null
 };
 
@@ -22,6 +23,7 @@ export default function reducer(state = initialState, action) {
       feedback: null,
       numCorrect: action.data.numCorrect,
       numAttempts: action.data.numAttempts,
+      streak: action.data.streak,
       error: null
     });
   } else if (action.type === FETCH_QUESTION_ERROR) {
@@ -35,6 +37,7 @@ export default function reducer(state = initialState, action) {
       feedback: action.data.feedback,
       numCorrect: action.data.numCorrect,
       numAttempts: action.data.numAttempts,
+      streak: action.data.streak,
       error: null
     });
   } else if (action.type === SUBMIT_ANSWER_ERROR) {

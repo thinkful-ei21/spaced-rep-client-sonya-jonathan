@@ -36,10 +36,11 @@ export const fetchQuestion = () => (dispatch, getState) => {
   })
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
-    .then(data => dispatch(fetchQuestionSuccess(data)))
-    .catch(err => {
-      dispatch(fetchQuestionError(err));
-    });
+    .then(data => {
+      console.log(data);
+      dispatch(fetchQuestionSuccess(data));
+    })
+    .catch(err => dispatch(fetchQuestionError(err)));
 };
 
 export const submitAnswer = userAnswer => (dispatch, getState) => {
@@ -58,7 +59,5 @@ export const submitAnswer = userAnswer => (dispatch, getState) => {
       console.log(data);
       dispatch(submitAnswerSuccess(data));
     })
-    .catch(err => {
-      dispatch(submitAnswerError(err));
-    });
+    .catch(err => dispatch(submitAnswerError(err)));
 };
