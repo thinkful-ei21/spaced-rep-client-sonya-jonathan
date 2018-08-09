@@ -4,10 +4,34 @@ body {
   font-family: sans-serif;
 }
 
-.log-out-button {
-  position: absolute;
+
+
+@media only screen and (min-width: 770px) {
+  .header-button {
+    
+    position: absolute;
   top: 50px;
   right: 25px;
+  }
+  .header-title {
+    text-align: center;
+  }
+
+}
+
+@media only screen and (max-width:770px){
+  .header-bar {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center
+  }
+}
+
+.header-title {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: auto;
 }
 
 .dashboard {
@@ -85,6 +109,10 @@ button {
 button:hover{
   background:  darkblue;
   color: white;
+}
+
+h1 {
+  font-size: 48px;
 }
 
 h3 {

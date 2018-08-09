@@ -12,7 +12,6 @@ export function LandingPage(props) {
 
   return (
     <div className="home">
-      <h1>Cartas Contra Español</h1>
       <h3>¡Vamos Apprender Español!</h3>
       <h5>(Let's Learn Spanish!)</h5>
       <p>

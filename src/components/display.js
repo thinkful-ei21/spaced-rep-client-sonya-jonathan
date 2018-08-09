@@ -5,8 +5,16 @@ import { fetchQuestion, submitAnswer } from '../actions/questions';
 
 export class Display extends React.Component {
   componentDidMount() {
+    this.input.focus();
     this.props.dispatch(fetchQuestion());
   }
+
+  componentDidUpdate() {
+    if (this.btn) {
+      this.btn.focus();
+    }
+  }
+
   submitAnswer(e) {
     e.preventDefault();
     this.props.dispatch(submitAnswer(this.input.value));
@@ -43,7 +51,10 @@ export class Display extends React.Component {
             <h3>¡Buen trabajo! ¡Estas correcto!</h3>
             <h5>(Good job! You are correct!)</h5>
           </div>
-          <button onClick={() => this.props.dispatch(fetchQuestion())}>
+          <button
+            ref={btn => (this.btn = btn)}
+            onClick={() => this.props.dispatch(fetchQuestion())}
+          >
             Next
           </button>
         </section>
@@ -64,7 +75,10 @@ export class Display extends React.Component {
               <span className="right-answer">{this.props.answer}</span>.)
             </h5>
           </div>
-          <button onClick={() => this.props.dispatch(fetchQuestion())}>
+          <button
+            ref={btn => (this.btn = btn)}
+            onClick={() => this.props.dispatch(fetchQuestion())}
+          >
             Next
           </button>
         </section>
