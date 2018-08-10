@@ -102,10 +102,16 @@ span {
 
 /*  styles for large screens */
 @media only screen and (min-width: 770px) {
-  .header-button {
+  .log-out-button {
     position: absolute;
     top: 15px;
     right: 25px;
+  }
+  
+  .reset-button {
+    position: absolute;
+    top: 15px;
+    left: 25px;
   }
 
   .header-title {
