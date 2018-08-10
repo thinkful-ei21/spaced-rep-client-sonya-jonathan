@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchQuestion, submitAnswer } from '../actions/questions';
+import './display.css';
 // import requiresLogin from './requires-login';
 
 export class Display extends React.Component {

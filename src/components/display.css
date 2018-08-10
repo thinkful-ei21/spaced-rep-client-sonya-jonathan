@@ -1,0 +1,97 @@
+.display, .feedback {
+  display: flex;
+  flex-flow: column;
+  align-self: center;
+  text-align: center;
+}
+
+.display-word {
+  text-align: center;
+  font-size: 60px;
+  margin: 0;
+  padding: 20px;
+}
+
+.display {
+  width: 75vw;
+}
+
+.display-box-label {
+  margin-right: 5px;
+  font-size: 28px;
+}
+
+.display-text-box {
+  padding-left: 10px;
+  border-radius: 290486px;
+  height: 32.4px;
+}
+
+button {
+  align-self: center;
+  border: 1px solid rgb(238, 108, 21);
+  border-radius: 290486px;
+  color: black;
+  font-size: 0.4em;
+  letter-spacing: 0.2em;
+  padding: 0.7em 1.7em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: none 200ms ease-out;
+  transition-property: color, background;
+  margin: 5px 0 15px 0;
+}
+
+button:focus, input:focus{
+  outline: none;
+}
+
+button:hover{
+  background:  rgb(238, 108, 21);
+  color: rgb(12, 46, 37);
+}
+
+.right-answer, .feedback-right {
+  color: Green;
+}
+
+.feedback-wrong {
+  color: red
+}
+
+.streak-section {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(45, 202, 163);
+  font-size: 20px;
+  }
+
+.streak.count {
+font-size: 25px;
+}
+
+@media only screen and (min-width: 770px) {
+  .streak-section {
+    font-size: 30px;
+    }
+    
+  .streak-count {
+    font-size: 60px;
+  }
+
+  form .display-word {
+    margin: 0
+  }
+
+  .display-word{
+    font-size: 72px;
+  }
+
+  button {
+    font-size: 0.6em;
+    margin: 10px 0 10px 0;
+    padding: 1em 2em;
+  }
+}
