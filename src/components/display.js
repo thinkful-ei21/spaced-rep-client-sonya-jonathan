@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchQuestion, submitAnswer } from '../actions/questions';
+import './display.css';
 // import requiresLogin from './requires-login';
 
 export class Display extends React.Component {
@@ -102,7 +103,7 @@ export class Display extends React.Component {
       <React.Fragment>
         {display}
         <section className="streak-section">
-          <span className="streak-count">Streak: {this.props.streak}</span>
+          <span className="streak-count">Your streak: {this.props.streak}</span>
           <span className="streak-message">{message}</span>
         </section>
       </React.Fragment>

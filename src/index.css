@@ -1,7 +1,3 @@
-/* font-family: 'Exo 2', sans-serif;
-font-family: 'Varela Round', sans-serif;
-font-family: 'Signika', sans-serif; */
-
 body {
   margin: 0;
   padding: 0;
@@ -10,14 +6,16 @@ body {
   font-family: 'Signika', sans-serif;
 }
 
-
-
 @media only screen and (max-width:770px){
   .header-bar {
     display: flex;
     flex-flow: column wrap;
     justify-content: center
   }
+}
+
+.header-bar, .home {
+  text-align: center;
 }
 
 .header-bar {
@@ -29,23 +27,35 @@ body {
   flex-flow: column;
   align-items: center;
   margin: auto;
-  /* background-color: rgb(10, 95, 10); */
-  /* color:  rgb(45, 202, 163);
-  text-shadow: black 2px 3px 0px; */
+}
+
+h1 {
+  color:  rgb(45, 202, 163);
+  text-shadow: rgb(12, 46, 37) 0 0 5px;
+  font-size: 30px;
+  border: 1px solid rgb(68, 19, 68);
+  border-radius: 15px;
+  background-color: rgb(30, 112, 30);
+  margin: 15px 0 0 0;
+  padding: 6px;
+}
+
+h3 {
+  font-size: 25px;
+  color: rgb(45, 202, 163);
+}
+
+h5 {
+  margin: 0 auto 30px auto;
+  padding: 10px;
+  font-size: 28px;
+  color: rgb(45, 202, 163);
 }
 
 .dashboard {
   display: flex;
   flex-flow: column;
   margin-top: 25px;
-}
-
-.user-data {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 5px;
-  margin: 0;
-  justify-content: space-around;
 }
 
 li {
@@ -58,92 +68,11 @@ span {
   justify-content: flex-end;
 }
 
-.header-bar, .home {
-  text-align: center;
-}
-
-.display, .feedback {
-  display: flex;
-  flex-flow: column;
-  align-self: center;
-  text-align: center;
-}
-
-.display-word {
-  text-align: center;
-  font-size: 72px;
-}
-
-.submit-section {
+.submit-section,  {
   display: flex;
   flex-flow: column;
 }
 
-.display-box-label {
-  margin-right: 5px;
-  font-size: 28px;
-}
-
-.display-text-box {
-  padding-left: 10px;
-  border-radius: 290486px;
-  height: 32.4px;
-}
-
-button {
-  align-self: center;
-  border: 1px solid rgb(238, 108, 21);
-  border-radius: 290486px;
-  color: black;
-  font-size: 0.6em;
-  letter-spacing: 0.2em;
-  padding: 1em 2em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: none 200ms ease-out;
-  transition-property: color, background;
-  margin: 10px 0 10px 0;
-}
-
-button:focus, input:focus {
-  outline: none;
-}
-
-button:hover {
-  background:  rgb(238, 108, 21);
-  color: rgb(12, 46, 37);
-  cursor: pointer;
-}
-
-.buttons {
-  display: flex;
-  flex-flow: row;
-  margin: auto;
-}
-
-h1 {
-  color:  rgb(45, 202, 163);
-  text-shadow: rgb(12, 46, 37) 0 0 5px;
-  font-size: 40px;
-  border: 10px solid rgb(238, 108, 21);
-  background-color: rgb(30, 112, 30);
-  margin: 0;
-  padding: 5px;
-}
-
-h3 {
-  font-size: 36px;
-  color: rgb(45, 202, 163);
-  padding: 10px 10px 0 10px;
-  margin: 10px auto 0 auto;
-}
-
-h5 {
-  margin: 0 auto 30px auto;
-  padding: 10px;
-  font-size: 28px;
-  color: rgb(45, 202, 163);
-}
 
 .home p, form {
   font-size: 20px;
@@ -155,25 +84,7 @@ h5 {
   margin: 0px auto 30px;
 }
 
-.right-answer, .feedback-right {
-  color: Green;
-}
-
-.feedback-wrong {
-  color: red
-}
-
-/* @media only screen and (min-width: 770px) {
-  .streak-section {
-  flex-direction: column;
-  color: rgb(45, 202, 163);
-  display: flex;
-  justify-content: center;
-  flex-flow: column;
-  }
-
-} */
-
+/*  styles for large screens */
 @media only screen and (min-width: 770px) {
   .log-out-button {
     position: absolute;
@@ -190,43 +101,19 @@ h5 {
   .header-title {
     text-align: center;
   }
+  
+  h1 {
+    padding: 15px;
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
 
-  .streak-section {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-    color: rgb(45, 202, 163);
-    font-size: 30px;
-    }
-    
-    .streak-count {
-      font-size: 60px;
-    }
+  h3 {
+    font-size: 36px;
+  }
 
-    h1 {
-      padding: 15px;
-      border-radius: 25px;
-    }
+  .register-link {
+    color: rgb(238, 108, 21);
+  }
 
-    .user-data {
-      color: rgb(45, 202, 163);
-      font-size: 25px;
-    }
-
-    .user-data .numCorrect {
-      font-size: 30px;
-    }
-
-    .user-data .numAttempts {
-      font-size: 30px;
-    }
-
-    form .display-word {
-      margin: 0;
-    }
-
-    .register-link {
-      color: rgb(238, 108, 21);
-    }
 }
