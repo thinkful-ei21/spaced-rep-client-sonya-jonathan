@@ -117,4 +117,8 @@ font-size: 25px;
     margin-bottom: 50px;
     font-size: 0.8em;
   }
+
+  .dashbaord {
+   height: 100vw;
+  }
 }
