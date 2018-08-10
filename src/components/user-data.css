@@ -12,12 +12,17 @@
 }
 
 .user-data h3 {
-  margin: 0 auto 10px auto;
+  margin: 0 auto 5px auto;
   padding: 5px;
 } 
 
+.user-stats {
+  margin-bottom: 10px;
+}
+
 span {
   margin-right: 10px;
+ 
 }
 
 span.num-correct {

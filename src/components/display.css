@@ -25,18 +25,22 @@
   padding-left: 10px;
   border-radius: 290486px;
   height: 32.4px;
+  width: 200px;
+  margin: 0 auto 15px auto;
 }
 
 button {
   align-self: center;
-  border: 1px solid rgb(238, 108, 21);
+  border: 1px solid rgb(68, 19, 68);
   border-radius: 290486px;
-  color: black;
-  font-size: 0.4em;
+  color: rgb(45, 202, 163);
+  font-size: 0.5em;
+  font-weight: bold;
   letter-spacing: 0.2em;
   padding: 0.7em 1.7em;
   text-transform: uppercase;
   text-decoration: none;
+  background-color: rgb(30, 112, 30);
   transition: none 200ms ease-out;
   transition-property: color, background;
   margin: 5px 0 15px 0;
@@ -66,6 +70,7 @@ button:hover{
   flex-direction: column;
   color: rgb(45, 202, 163);
   font-size: 20px;
+  margin: 0 25px;
   }
 
 .streak.count {
@@ -81,17 +86,31 @@ font-size: 25px;
     font-size: 60px;
   }
 
-  form .display-word {
-    margin: 0
-  }
+   form .display-word {
+     margin: 15px; 
+  } 
 
   .display-word{
-    font-size: 72px;
+    font-size: 96px;
   }
 
   button {
-    font-size: 0.6em;
-    margin: 10px 0 10px 0;
+    font-size: 0.8em;
     padding: 1em 2em;
+  }
+
+  .display button {
+    padding: 0.8em 1.8em;
+  }
+
+  .display {
+    height: 350px;
+    width: 400px;
+  }
+
+  .display-text-box {
+    width: 300px;
+    margin-bottom: 50px;
+    font-size: 0.8em;
   }
 }

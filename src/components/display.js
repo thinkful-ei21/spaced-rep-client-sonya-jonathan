@@ -103,7 +103,7 @@ export class Display extends React.Component {
       <React.Fragment>
         {display}
         <section className="streak-section">
-          <span className="streak-count">Streak: {this.props.streak}</span>
+          <span className="streak-count">Your streak: {this.props.streak}</span>
           <span className="streak-message">{message}</span>
         </section>
       </React.Fragment>

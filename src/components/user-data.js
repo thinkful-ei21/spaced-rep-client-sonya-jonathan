@@ -6,7 +6,7 @@ export class UserData extends React.Component {
   render() {
     return (
       <section className="user-data">
-        <h3>Welcome, {this.props.username}</h3>
+        <h3>Welcome, {this.props.username}!</h3>
         <section className="user-stats">
         <span>Times Correct: </span>
         <span className="num-correct">{this.props.numCorrect}</span>

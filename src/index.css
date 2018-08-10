@@ -33,10 +33,10 @@ h1 {
   color:  rgb(45, 202, 163);
   text-shadow: rgb(12, 46, 37) 0 0 5px;
   font-size: 30px;
-  border: 10px solid rgb(238, 108, 21);
-  border-radius: 25px;
+  border: 1px solid rgb(68, 19, 68);
+  border-radius: 15px;
   background-color: rgb(30, 112, 30);
-  margin: 0;
+  margin: 15px 0 0 0;
   padding: 6px;
 }
 
@@ -99,6 +99,7 @@ span {
   h1 {
     padding: 15px;
     font-size: 40px;
+    margin-bottom: 15px;
   }
 
   h3 {
