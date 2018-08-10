@@ -20,20 +20,21 @@
   margin-bottom: 10px;
 }
 
-span {
+.user-data span {
   margin-right: 10px;
+  font-size: 15px;
  
 }
 
 span.num-correct {
   margin-left: 5px;
-  font-size: 35px;
+  font-size: 25px;
   color: rgb(238, 108, 21);
 }
 
 span.num-attempts {
   margin-right: 0px;
-  font-size: 35px;
+  font-size: 25px;
   color: rgb(238, 108, 21);
 }
 
@@ -49,5 +50,9 @@ span.num-attempts {
 
   .user-data .numAttempts {
     font-size: 30px;
+  }
+
+  span.num-attempts, span.num-correct {
+    font-size: 35px;
   }
 }
