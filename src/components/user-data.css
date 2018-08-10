@@ -27,10 +27,14 @@ span {
 
 span.num-correct {
   margin-left: 5px;
+  font-size: 35px;
+  color: rgb(238, 108, 21);
 }
 
 span.num-attempts {
   margin-right: 0px;
+  font-size: 35px;
+  color: rgb(238, 108, 21);
 }
 
 @media only screen and (min-width: 770px) {

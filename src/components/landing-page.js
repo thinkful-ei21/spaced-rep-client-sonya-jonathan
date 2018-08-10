@@ -15,7 +15,7 @@ export function LandingPage(props) {
       <h3>¡Vamos Apprender Español!</h3>
       <h5>(Let's Learn Spanish!)</h5>
       <p>
-        Come and use the best technique to learning anything and apply it yo
+        Come and use the best technique to learning anything and apply it to
         learn the best language in the world... Español!
       </p>
       <LoginForm />

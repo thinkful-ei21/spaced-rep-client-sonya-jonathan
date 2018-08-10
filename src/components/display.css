@@ -73,8 +73,12 @@ button:hover{
   margin: 0 25px;
   }
 
-.streak.count {
+.streak-count {
 font-size: 25px;
+}
+
+.streak-num {
+  color: rgb(238, 108, 21);
 }
 
 @media only screen and (min-width: 770px) {
