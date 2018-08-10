@@ -12,6 +12,22 @@ body {
     flex-flow: column wrap;
     justify-content: center
   }
+
+  .buttons { 
+    display: flex; flex-flow: row wrap; justify-content: center; 
+  }
+
+  .log-out-button {
+    margin-left:5px; 
+  }
+
+  .reset-button { 
+    margin-right: 5px; 
+  }
+
+  .log-out, .reset { 
+    width: 77px 
+  }
 }
 
 .header-bar, .home {
@@ -36,7 +52,7 @@ h1 {
   border: 1px solid rgb(68, 19, 68);
   border-radius: 15px;
   background-color: rgb(30, 112, 30);
-  margin: 15px 0 0 0;
+  margin: 15px 0 15px 0;
   padding: 6px;
 }
 
