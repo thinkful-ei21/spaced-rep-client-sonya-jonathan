@@ -69,12 +69,12 @@ span {
   text-align: center;
 }
 
-.display-word{
+.display-word {
   text-align: center;
   font-size: 72px;
 }
 
-.submit-section,  {
+.submit-section {
   display: flex;
   flex-flow: column;
 }
@@ -105,13 +105,20 @@ button {
   margin: 10px 0 10px 0;
 }
 
-button:focus, input:focus{
+button:focus, input:focus {
   outline: none;
 }
 
-button:hover{
+button:hover {
   background:  rgb(238, 108, 21);
   color: rgb(12, 46, 37);
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row;
+  margin: auto;
 }
 
 h1 {
@@ -129,10 +136,9 @@ h3 {
   color: rgb(45, 202, 163);
   padding: 10px 10px 0 10px;
   margin: 10px auto 0 auto;
-  
 }
+
 h5 {
-  /* margin: 10px auto 10px auto; */
   margin: 0 auto 30px auto;
   padding: 10px;
   font-size: 28px;
@@ -169,14 +175,22 @@ h5 {
 } */
 
 @media only screen and (min-width: 770px) {
-  .header-button {
+  .log-out-button {
     position: absolute;
     top: 15px;
     right: 25px;
   }
+  
+  .reset-button {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+  }
+
   .header-title {
     text-align: center;
   }
+
   .streak-section {
     display: flex;
     text-align: center;
@@ -190,8 +204,6 @@ h5 {
       font-size: 60px;
     }
 
-
-    
     h1 {
       padding: 15px;
       border-radius: 25px;
@@ -204,7 +216,6 @@ h5 {
 
     .user-data .numCorrect {
       font-size: 30px;
-
     }
 
     .user-data .numAttempts {
@@ -212,11 +223,10 @@ h5 {
     }
 
     form .display-word {
-      margin: 0
+      margin: 0;
     }
 
     .register-link {
       color: rgb(238, 108, 21);
     }
-
 }

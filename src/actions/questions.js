@@ -25,6 +25,18 @@ export const submitAnswerError = error => ({
   error
 });
 
+export const RESET_GAME_SUCCESS = 'RESET_GAME_SUCCESS';
+export const resetGameSuccess = data => ({
+  type: RESET_GAME_SUCCESS,
+  data
+});
+
+export const RESET_GAME_ERROR = 'RESET_GAME_ERROR';
+export const resetGameError = error => ({
+  type: RESET_GAME_ERROR,
+  error
+});
+
 export const fetchQuestion = () => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
   return fetch(`${API_BASE_URL}/questions/one`, {
@@ -36,10 +48,7 @@ export const fetchQuestion = () => (dispatch, getState) => {
   })
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
-    .then(data => {
-      console.log(data);
-      dispatch(fetchQuestionSuccess(data));
-    })
+    .then(data => dispatch(fetchQuestionSuccess(data)))
     .catch(err => dispatch(fetchQuestionError(err)));
 };
 
@@ -55,9 +64,25 @@ export const submitAnswer = userAnswer => (dispatch, getState) => {
   })
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
+    .then(data => dispatch(submitAnswerSuccess(data)))
+    .catch(err => dispatch(submitAnswerError(err)));
+};
+
+export const resetGame = () => (dispatch, getState) => {
+  const authToken = getState().auth.authToken;
+  return fetch(`${API_BASE_URL}/questions`, {
+    method: 'PUT',
+    headers: {
+      Authorization: `Bearer ${authToken}`,
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(res => normalizeResponseErrors(res))
+    .then(res => res.json())
     .then(data => {
       console.log(data);
-      dispatch(submitAnswerSuccess(data));
+      dispatch(resetGameSuccess(data));
     })
-    .catch(err => dispatch(submitAnswerError(err)));
+    .then(dispatch(fetchQuestion()))
+    .catch(err => dispatch(resetGameError(err)));
 };
