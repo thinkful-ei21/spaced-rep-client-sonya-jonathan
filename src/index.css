@@ -12,6 +12,24 @@ body {
     flex-flow: column wrap;
     justify-content: center
   }
+
+  .buttons { 
+    display: flex; 
+    flex-flow: row wrap; 
+    justify-content: center; 
+  }
+
+  .log-out-button {
+    margin-left: 5px; 
+  }
+
+  .reset-button { 
+    margin-right: 5px; 
+  }
+
+  .log-out, .reset { 
+    width: 90px;
+  }
 }
 
 .header-bar, .home {
@@ -36,8 +54,13 @@ h1 {
   border: 1px solid rgb(68, 19, 68);
   border-radius: 15px;
   background-color: rgb(30, 112, 30);
-  margin: 15px 0 0 0;
+  margin: 15px 0 15px 0;
   padding: 6px;
+}
+
+h2 {
+  font-size: 25px;
+  color: rgb(45, 202, 163);
 }
 
 h3 {
@@ -82,19 +105,31 @@ span {
   color: rgb(73, 6, 73);
   width: 300px;
   margin: 0px auto 30px;
+  width: 75vw;
+}
+
+.register-link, .login-link  {
+  color: rgb(238, 108, 21);
+  font-size: 20px;
+  padding: 10px;
+}
+
+.form-error {
+  color: rgb(139, 17, 17);
+ 
 }
 
 /*  styles for large screens */
 @media only screen and (min-width: 770px) {
   .log-out-button {
     position: absolute;
-    top: 15px;
+    top: 30px;
     right: 25px;
   }
   
   .reset-button {
     position: absolute;
-    top: 15px;
+    top: 30px;
     left: 25px;
   }
 
@@ -112,8 +147,10 @@ span {
     font-size: 36px;
   }
 
-  .register-link {
-    color: rgb(238, 108, 21);
+  .home p, form {
+
+    width: 450px;
   }
+
 
 }
