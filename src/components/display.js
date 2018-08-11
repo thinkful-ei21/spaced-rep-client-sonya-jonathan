@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchQuestion, submitAnswer } from '../actions/questions';
 import './display.css';
-// import requiresLogin from './requires-login';
 
 export class Display extends React.Component {
   componentDidMount() {
@@ -110,13 +109,11 @@ export class Display extends React.Component {
     );
   }
 }
-const mapStateToProps = state => {
-  return {
-    streak: state.questions.streak,
-    question: state.questions.question,
-    answer: state.questions.answer,
-    feedback: state.questions.feedback
-  };
-};
+const mapStateToProps = state => ({
+  streak: state.questions.streak,
+  question: state.questions.question,
+  answer: state.questions.answer,
+  feedback: state.questions.feedback
+});
 
 export default connect(mapStateToProps)(Display);
