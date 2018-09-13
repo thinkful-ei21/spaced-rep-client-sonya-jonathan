@@ -14,30 +14,30 @@ __________________________
 ### Desktop View
 
 ##### Landing Page
-![Landing Page](src/images/LG_LP.jpg)
+![Landing Page](src/images/LG_LP.JPG)
 
 ##### Registration Page
-![Registration Page](src/images/LG_RP.jpg)
+![Registration Page](src/images/LG_RP.JPG)
 
 ##### Game Screen
-![Game Search](src/images/LG_GS.jpg)
+![Game Search](src/images/LG_GS.JPG)
 
 ##### Feedback Screen
-![Feedback Screen](src/images/LG_FS.jpg)
+![Feedback Screen](src/images/LG_FS.JPG)
 
 ### Mobile View
 
 ##### Landing Page
-![Landing Page](src/images/SM_LP.jpg)
+![Landing Page](src/images/SM_LP.JPG)
 
 ##### Registration Page
-![Registration Page](src/images/SM_RP.jpg)
+![Registration Page](src/images/SM_RP.JPG)
 
 ##### Game Screen
-![Game Search](src/images/SM_GS.jpg)
+![Game Search](src/images/SM_GS.JPG)
 
 ##### Feedback Screen
-![Feedback Screen](src/images/SM_FS.jpg)
+![Feedback Screen](src/images/SM_FS.JPG)
 
 __________________________
 ## Tech Stack
