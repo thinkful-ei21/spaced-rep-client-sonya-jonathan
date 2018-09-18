@@ -4,7 +4,7 @@ Cartas Contra Español is a language learning app that uses spaced repetition.  
 
 __________________________
 ## Below are links to the live app and GitHub Repo for the server side:
-- [Live App](https://sr-app-sj.herokuapp.com/dashboard)
+- [Live App](https://cartas-contra-espanol.herokuapp.com/)
 
   Demo Login: 
     - Username: DEMO
